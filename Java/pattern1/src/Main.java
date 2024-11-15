@@ -1,32 +1,11 @@
 import java.util.Scanner;
-
-public class Main {
+import patterns.alphaPatterns.pyramid1;
+import patterns.starPatterns.rectPrint;
+public class Main extends pyramid1{
     public static void main(String[] args) {
         Scanner sc =new Scanner(System.in);
         int n = sc.nextInt();
-
-        for(int i=0;i<n;i++)
-        {
-            char ch = 'A';
-            for(int j=0;j<n-i-1;j++)
-            {
-                System.out.print(" ");
-            }
-            for(int j=n-i-1;j<n;j++)
-            {
-                System.out.print(ch);
-                ch++;
-            }
-            if(i>0)
-            {
-                for(int j=0;j<i;j++)
-                {
-                    ch = (char) (ch-2);
-                    System.out.print(ch);
-                    ch++;
-                }
-            }
-            System.out.println();
-        }
+//        pyramid1.printTriangle(n);
+        rectPrint.printSquare(n);
     }
 }
